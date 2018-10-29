@@ -9,6 +9,7 @@ public class Manager : MonoBehaviour
     public Material playerMaterial;
     public Color[] playerColors = new Color[10];
     public GameObject[] playerTrails = new GameObject[10];
+    public float accelSpeed = 15.5f;
 
     public int currentLevel = 0;       // Used when changing from meny to game scene
     public int menuFocus = 0;          // Used when entering the menu scene, to know which menu focus
@@ -28,7 +29,7 @@ public class Manager : MonoBehaviour
         if (SaveManager.Instance.state.usingAccelerometer)
         {
             // If we can use it, replace the Y param by Z, we don't need that Y
-            Vector3 a = Input.acceleration;
+            Vector3 a = Input.acceleration * accelSpeed;
             a.y = a.z;
             return a;
         }

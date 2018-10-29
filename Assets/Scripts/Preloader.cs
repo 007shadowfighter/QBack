@@ -19,7 +19,10 @@ public class Preloader : MonoBehaviour
 
         // Pre load the game
         // $$
-
+        {
+            // Disable screen dimming
+            Screen.sleepTimeout = SleepTimeout.NeverSleep;
+    }
         // Get a timestamp of the completion time
         // if loadtime is super, give it a small buffer time so we can apreciate the logo
         if (Time.time < minimumLogoTime)

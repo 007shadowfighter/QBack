@@ -8,8 +8,8 @@ public class PlayerMotor : MonoBehaviour
     private CharacterController controller;
 
     public float baseSpeed = 20.0f;
-    private float rotSpeedX = 8.0f;
-    private float rotSpeedY = 5.5f;
+    private float rotSpeedX = 6.0f;
+    private float rotSpeedY = 3.0f;
 
     private float deathTime;
     private float deathDuration = 2;
@@ -51,12 +51,17 @@ public class PlayerMotor : MonoBehaviour
         Vector3 inputs = Manager.Instance.GetPlayerInput();
 
         // Get the delta direction
+        //Input.acceleration.x * 2.0f;
         Vector3 yaw = inputs.x * transform.right * rotSpeedX * Time.deltaTime;
         Vector3 pitch = inputs.y * transform.up * rotSpeedY * Time.deltaTime;
         Vector3 dir = yaw + pitch;
 
+        Debug.Log(dir.ToString());
+
         // Make sure we limit the player from doing a loop
         float maxX = Quaternion.LookRotation(moveVector + dir).eulerAngles.x;
+
+        Debug.Log(maxX.ToString());
 
         // If hes not going too far up/down, add the direction to the moveVector
         if (maxX < 90 && maxX > 70 || maxX > 270 && maxX < 290)
