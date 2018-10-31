@@ -7,7 +7,7 @@ public class PlayerCamera : MonoBehaviour
     public Transform lookAt;
 
     private Vector3 desiredPosition;
-    private float offset = 0.5f;
+    private float offset = -0.5f;
     private float distance = 1.5f;
 
     private void Update()
