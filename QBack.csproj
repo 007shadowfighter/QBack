@@ -78,8 +78,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Catch.cs" />
-    <Compile Include="Assets\Scripts\CatchAnimation.cs" />
+    <Compile Include="Assets\Scripts\FootballPlayerMove.cs" />
     <Compile Include="Assets\Scripts\GameScene.cs" />
     <Compile Include="Assets\Scripts\Helper.cs" />
     <Compile Include="Assets\Scripts\Manager.cs" />
@@ -94,6 +93,7 @@
     <Compile Include="Assets\Scripts\SaveManager.cs" />
     <Compile Include="Assets\Scripts\SaveState.cs" />
     <Compile Include="Assets\Scripts\Token.cs" />
+    <Compile Include="Assets\Scripts\animations\CatchAnimation.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\US_Football_Player\Shaders\MobileReflective.shader" />
