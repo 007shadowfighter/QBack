@@ -13,10 +13,10 @@ public class CatchAnimation : MonoBehaviour
 
     void OnTriggerEnter(Collider col)
     {
-        if (col.gameObject.tag == ("Player"))
+        if (col.CompareTag("Player"))
         {
-            //anim.enabled = true;
-            anim.Play("Run");
+            anim.SetBool("footballPlayerBackflipOn", true);
+            //play audio clip and do anything else
         }
     }
 }
